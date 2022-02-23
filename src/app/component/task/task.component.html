@@ -1,0 +1,32 @@
+<div class="container task" *ngIf="tasks">
+  <div class="task col-md-4">
+  
+    <p></p>
+    <div *ngIf="isAdmin()">
+    <button (click)="newTask()" class="btn btn-danger">Add Task</button>
+    </div>
+    <p></p>
+
+    <div class="panel panel-danger">
+      <div class="panel-heading">Tasks</div>
+
+      <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#Id</th>
+                <th scope="col">TaskName</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of tasks._embedded.tasks">
+                    <td>{{t.id}}</td>
+                    <td>{{t.taskName}}</td>
+                </tr>
+            </tbody>
+            </table>
+  
+       </div>
+    </div>
+  </div>
+</div>

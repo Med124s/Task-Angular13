@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="panel panel-success">
+    <div class="panel-heading">New Tasks</div>
+    <div class="panel-body">
+      <form #f="ngForm" (ngSubmit)="newTask(f.value)">
+        <div class="form-group">
+          <label for="taskName">TaskName:</label>
+          <input type="text" class="form-control" name="taskName" ngModel />
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
